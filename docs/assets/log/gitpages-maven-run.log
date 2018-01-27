@@ -1,0 +1,9 @@
+﻿Microsoft Windows [版本 10.0.10586]
+(c) 2015 Microsoft Corporation。保留所有权利。
+
+C:\Users\Jerry>cd helloworld
+
+C:\Users\Jerry\helloworld>java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworld.App
+Hello World!
+
+C:\Users\Jerry\helloworld>

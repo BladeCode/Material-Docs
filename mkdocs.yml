@@ -1,0 +1,86 @@
+# Project information
+site_name: Material-Docs
+site_description: Material Design theme blog
+site_author: Jerry xu
+site_url: https://bladecode.github.io
+
+# Repository
+repo_name: 'BladeCode/Material-Docs'
+repo_url: 'https://github.com/BladeCode/BladeCode.github.io'
+
+# Copyright
+copyright: 'Copyright &copy; 2015 - 2018 Jerry xu'
+
+# Configuration
+theme:
+  name: 'material'
+  palette:
+    primary: 'pink'
+    accent: 'indigo'
+  logo:
+    icon: 'done_all'
+  # favicon: 'assets/images/favicon.png'
+  feature:
+    tabs: true
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/BladeCode'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+    - type: 'weibo'
+      link: 'http://weibo.com/onblade'
+
+# Google Analytics
+google_analytics:
+  - 'UA-100235665-1'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.b64
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+pages:
+  - About: index.md
+  - Android:
+    - Android6.0: android/android6.0.md
+    - Apk反编译: android/apktool.md
+    - 强迫症患者: android/ocd.md
+  - Serve: 
+    - Maven初体验: serve/maven.md
+  - Tools:
+    - .gitignore: tools/.gitignore.md
+    - Git 学习笔记: tools/git.md
+    - Internet Download Manager: tools/idm.md
+    - Sublime Text: tools/sublime.md
+  - Web: 
+    - Cordova 打包: web/cordova-build.md
+    - Firefox Firebug: web/firebug.md
+    - HTTPS原理浅析: web/https.md
+    - jQueryMobile常用技巧: web/jquery-mobile.md 
+

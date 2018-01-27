@@ -1,0 +1,21 @@
+sudo: false
+language: python  
+dist: trusty
+git:
+  depth: false
+  
+python:
+  - "3.6"
+  - "nightly"
+install:
+  - pip install mkdocs-material
+script:
+  - pytest
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: 126b35f3692b9ba9f4afb5c95fc6db3860163ed3  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
