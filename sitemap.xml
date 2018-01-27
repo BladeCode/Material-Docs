@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>https://bladecode.github.io/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>https://bladecode.github.io/android/android6.0/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/android/apktool/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/android/ocd/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://bladecode.github.io/serve/maven/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://bladecode.github.io/tools/.gitignore/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/tools/git/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/tools/idm/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/tools/sublime/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://bladecode.github.io/web/cordova-build/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/web/firebug/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/web/https/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://bladecode.github.io/web/jquery-mobile/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

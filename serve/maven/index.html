@@ -1,0 +1,1002 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Material Design theme blog">
+      
+      
+        <link rel="canonical" href="https://bladecode.github.io/serve/maven/">
+      
+      
+        <meta name="author" content="Jerry xu">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.3">
+    
+    
+      
+        <title>Maven初体验 - Material-Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#maven" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://bladecode.github.io" title="Material-Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">done_all</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Material-Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Maven初体验
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/BladeCode/BladeCode.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      BladeCode/Material-Docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About" class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../android/android6.0/" title="Android" class="md-tabs__link">
+          Android
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Serve" class="md-tabs__link md-tabs__link--active">
+          Serve
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tools/.gitignore/" title="Tools" class="md-tabs__link">
+          Tools
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../web/cordova-build/" title="Web" class="md-tabs__link">
+          Web
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">done_all</i>
+      
+    </span>
+    Material-Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/BladeCode/BladeCode.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      BladeCode/Material-Docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/android6.0/" title="Android6.0" class="md-nav__link">
+      Android6.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/apktool/" title="Apk反编译" class="md-nav__link">
+      Apk反编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/ocd/" title="强迫症患者" class="md-nav__link">
+      强迫症患者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Serve
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Serve
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Maven初体验
+      </label>
+    
+    <a href="./" title="Maven初体验" class="md-nav__link md-nav__link--active">
+      Maven初体验
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maven_1" title="Maven安装" class="md-nav__link">
+    Maven安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_2" title="Maven项目构建" class="md-nav__link">
+    Maven项目构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_3" title="Maven项目运行" class="md-nav__link">
+    Maven项目运行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_4" title="Maven镜像仓库" class="md-nav__link">
+    Maven镜像仓库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eclipsemaven" title="Eclipse安装Maven插件" class="md-nav__link">
+    Eclipse安装Maven插件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eclipsemaven_1" title="Eclipse创建Maven项目" class="md-nav__link">
+    Eclipse创建Maven项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eclipsemaven_2" title="Eclipse运行Maven项目" class="md-nav__link">
+    Eclipse运行Maven项目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pomxml" title="POM.xml文件常用标签" class="md-nav__link">
+    POM.xml文件常用标签
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mavenweb" title="Maven构建Web项目" class="md-nav__link">
+    Maven构建Web项目
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/.gitignore/" title=".gitignore" class="md-nav__link">
+      .gitignore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/git/" title="Git 学习笔记" class="md-nav__link">
+      Git 学习笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/idm/" title="Internet Download Manager" class="md-nav__link">
+      Internet Download Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/sublime/" title="Sublime Text" class="md-nav__link">
+      Sublime Text
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/cordova-build/" title="Cordova 打包" class="md-nav__link">
+      Cordova 打包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/firebug/" title="Firefox Firebug" class="md-nav__link">
+      Firefox Firebug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/https/" title="HTTPS原理浅析" class="md-nav__link">
+      HTTPS原理浅析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/jquery-mobile/" title="jQueryMobile常用技巧" class="md-nav__link">
+      jQueryMobile常用技巧
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maven_1" title="Maven安装" class="md-nav__link">
+    Maven安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_2" title="Maven项目构建" class="md-nav__link">
+    Maven项目构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_3" title="Maven项目运行" class="md-nav__link">
+    Maven项目运行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven_4" title="Maven镜像仓库" class="md-nav__link">
+    Maven镜像仓库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eclipsemaven" title="Eclipse安装Maven插件" class="md-nav__link">
+    Eclipse安装Maven插件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eclipsemaven_1" title="Eclipse创建Maven项目" class="md-nav__link">
+    Eclipse创建Maven项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eclipsemaven_2" title="Eclipse运行Maven项目" class="md-nav__link">
+    Eclipse运行Maven项目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pomxml" title="POM.xml文件常用标签" class="md-nav__link">
+    POM.xml文件常用标签
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mavenweb" title="Maven构建Web项目" class="md-nav__link">
+    Maven构建Web项目
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/BladeCode/BladeCode.github.io/edit/master/docs/serve/maven.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="maven">Maven初体验<a class="headerlink" href="#maven" title="Permanent link">&para;</a></h1>
+<p>2016-01-22 12:01:22</p>
+<p>Maven是基于项目对象模型（POM），可以通过一小段描述信息来管理项目的构建，报告和文档的管理工具</p>
+<h2 id="maven_1">Maven安装<a class="headerlink" href="#maven_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>安装JDK，并配置好环境变量</li>
+<li>Maven：<a href="https://maven.apache.org/">官网地址</a></li>
+<li>解压下载文件，设置环境变量<ul>
+<li>变量名：<code>MAVEN_HOME</code></li>
+<li>变量值：你放置Maven目录，如<code>C:\DevTool\Maven\apache-maven-3.3.3</code></li>
+<li>添加Path：<code>%MAVEN_HOME%\bin</code></li>
+</ul>
+</li>
+<li>CMD命令窗口输入：<code>mvn -v</code>，回车，可以查看到你当前安装Maven的版本，即安装成功</li>
+</ol>
+<h2 id="maven_2">Maven项目构建<a class="headerlink" href="#maven_2" title="Permanent link">&para;</a></h2>
+<p>自动创建项目骨架 </p>
+<ul>
+<li>CMD命令：</li>
+</ul>
+<p><code class="codehilite"><span class="nx">mvn</span> <span class="nx">archetype</span><span class="o">:</span><span class="nx">generate</span> <span class="o">-</span><span class="nx">DgroupId</span><span class="o">=</span><span class="nx">com</span><span class="p">.</span><span class="nx">mycompany</span><span class="p">.</span><span class="nx">helloworld</span> <span class="o">-</span><span class="nx">DartifactId</span><span class="o">=</span><span class="nx">helloworld</span> <span class="o">-</span><span class="nx">Dpackage</span><span class="o">=</span><span class="nx">com</span><span class="p">.</span><span class="nx">mycompany</span><span class="p">.</span><span class="nx">helloworld</span> <span class="o">-</span><span class="nx">Dversion</span><span class="o">=</span><span class="mf">1.0</span><span class="o">-</span><span class="nx">SNAPSHOT</span></code></p>
+<ul>
+<li>命令解释：<ul>
+<li><code>archetype:generate</code>：列出Maven构建项目模板</li>
+<li><code>DgroupId</code>：组织名，通常用公司网址的反写+项目名</li>
+<li><code>DartifactId</code>：项目在组织中唯一标识，通常用项目名+模块名</li>
+<li><code>Dpackage</code>：代码所存在的包名</li>
+<li><code>Dversion</code>：版本号</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li>第一次构建项目需要链接网络，从网上的 maven 库 (repository) 下载需要文件，存放在本地库（<code>&lt;C:\YouPCName\.m2\repository\&gt;</code> ）中  </li>
+<li>文件加载完需要选择你要使用模板的编号（这里选择716即可）<code>Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 716:716</code></li>
+<li>需要选择构建使用的版本号（这里选择最新6对应的版本）<code>Choose org.apache.maven.archetypes:maven-archetype-quickstart version:6</code></li>
+<li>确认构建项目<code>Confirm properties configuration:y</code></li>
+<li>构建过程：<a href="../../assets/log/gitpages-maven.log">日志</a></li>
+</ol>
+</div>
+<p>项目目录结构<br />
+<img alt="maven-struct" src="../../assets/images/gitpages-maven-struct.png" /></p>
+<h2 id="maven_3">Maven项目运行<a class="headerlink" href="#maven_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>CMD命令，先进入项目文件夹，再输入：<code>mvn package</code></li>
+<li>此时，Maven在helloworld项目下面建立一个新的目录target/，构建打包后的jar包文件，<code>helloworld-1.0-SNAPSHOT.jar</code>就放在这个目录下；编译后的的class文件放在target/classes/目录下，测试class文件放在target/test-classes/目录下</li>
+<li>运行项目，CMD命令：<code>java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworld.App</code>，查看是否输出：<code>Hello World!</code></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li>当你第一次编译运行maven项目需要链接网络，从网上的 maven 库 (repository)下载需要的程序，存放在本地库（&lt;YouPCName.m2\repository> ）中</li>
+<li>编译过程：<a href="../../assets/log/gitpages-maven-package.log">日志</a></li>
+<li>运行过程：<a href="../../assets/log/gitpages-maven-run.log">日志</a></li>
+</ol>
+</div>
+<h2 id="maven_4">Maven镜像仓库<a class="headerlink" href="#maven_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>修改镜像仓库地址
+    可能由于国内网络问题，无法访问外网，那么我们就需要修改配置文件，访问国内的Maven镜像仓库地址  <ul>
+<li>settings.xml文件路径（Maven安装路径\conf\settings.xml）<br />
+如<code>C:\DevTool\Maven\apache-maven-3.3.3\conf\settings.xml</code>  </li>
+<li>打开settings.xml文件，修改152-157行内容并取消注释<br />
+<img alt="maven-remove" src="../../assets/images/gitpages-maven-remove.png" /></li>
+<li>更多详细设置，详情见<a href="http://maven.oschina.net/help.html">开源中国Maven库使用帮助</a></li>
+</ul>
+</li>
+<li>修改本地仓库地址
+    可能有些时候我们需要自定义更改Maven的本地仓库默认地址<ul>
+<li>settings.xml文件路径（Maven安装路径\conf\settings.xml）<br />
+如<code>C:\DevTool\Maven\apache-maven-3.3.3\conf\settings.xml</code></li>
+<li>打开settings.xml文件，修改53行路径并取消注释<br />
+<code>&lt;localRepository&gt;D:/MavenProject/repo&lt;/localRepository&gt;</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="eclipsemaven">Eclipse安装Maven插件<a class="headerlink" href="#eclipsemaven" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Eclipse4.0以上版本或者MyEclipse中已经集成了Maven插件，不用手动安装</p>
+</blockquote>
+<h3 id="eclipsemaven_1">Eclipse创建Maven项目<a class="headerlink" href="#eclipsemaven_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>New &gt; Maven &gt;Maven Project &gt; Next</li>
+<li>选择ArtifactId是maven-archetype-quickstart模板进行构建</li>
+<li>根据需要，填写GroupId，ArtifactId，会自动生成Package &gt; Finish</li>
+</ol>
+<h3 id="eclipsemaven_2">Eclipse运行Maven项目<a class="headerlink" href="#eclipsemaven_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>展开项目目录结构，选中<code>pom.xml</code>文件右键</li>
+<li>Run As &gt; Maven build... &lt; Goals(输入compile，或者package：compile表示编译，package表示打包)</li>
+</ol>
+<h2 id="pomxml">POM.xml文件常用标签<a class="headerlink" href="#pomxml" title="Permanent link">&para;</a></h2>
+<ol>
+<li>常用标签说明</li>
+<li>依赖范围：官方文档说明<br />
+    依赖范围是用来控制依赖于三种classpath的关系<br />
+<code>compile</code>：默认范围，编译测试运行都有效<br />
+<code>provided</code>：在编译和测试时有效<br />
+<code>runtime</code>：在测试和运行时有效<br />
+<code>test</code>：只在测试范围有效<br />
+<code>system</code>：于provided使用范围一样，同时与本机系统相关联，可移植性差<br />
+<code>import</code>：导入依赖范围，它只使用在dependencyManagement中，表示从其它的pom中导入dependency的配置</li>
+<li>依赖传递：类似可以理解A依赖B,B依赖C,即A依赖C</li>
+<li>依赖冲突：<ul>
+<li>原则1：在路径不同情况下，先解析路径短的依赖<br />
+    如：依赖一、A &gt; B &gt; C &gt; X(jar)<br />
+    依赖二、A &gt; D &gt; X(jar)默认选择会选择这条依赖先解析</li>
+<li>原则2：在路径相同情况下，先声明，先解析</li>
+</ul>
+</li>
+<li>聚合与继承<br />
+    在Maven项目中有多个项目，想要install命令安装到本地仓库或其他命令，必须每个项目一次一次执行，Maven一次性进行install命令处理项目的这种方式，叫做聚合<br />
+    在聚合的项目pom中加入modules标签，modules中加入module标签，module标签填入需要聚合项目的地址即可</li>
+</ol>
+<h2 id="mavenweb">Maven构建Web项目<a class="headerlink" href="#mavenweb" title="Permanent link">&para;</a></h2>
+<ol>
+<li>New &gt; Maven &gt;Maven Project &gt; Next</li>
+<li>选择ArtifactId是maven-archetype-webapp模板进行构建</li>
+<li>根据需要，填写GroupId，ArtifactId，会自动生成Package &gt; Finish</li>
+<li>展开项目，右键Java Resources &gt; New &gt; Source Folder 
+    Project Name：Browse... &gt; 定位到当前项目名<br />
+    Folder Name：src/main/java（第二次src/test/java）</li>
+<li>检查class文件输出路径：
+    项目右键 &gt; Build Path &gt; Configure Build Path... &gt; Source 下查看</li>
+<li>转化项目为Web项目：
+    项目右键 &gt; Properties &gt; Project Facets（左侧导航栏）&gt; 勾选Dynamic Web Module选项</li>
+<li>修改部署时，项目的默认配置：
+    项目右键 &gt; Properties &gt; Deployment Assembly（左侧导航栏）&gt; 移除包含/src/test路径的目录</li>
+<li>使用jetty插件运行web项目<ul>
+<li><a href="http://mvnrepository.com">Maven中央仓库</a>：搜索jetty</li>
+<li>选择Jetty :: Server Core Web Servers，根据需要选择版本，进入版本页面后复制下面图表Maven中的标签地址</li>
+<li>粘贴入<code>pom.xml</code>文件<plugin>标签中</li>
+<li>选择项目，右键 &gt; Run As &gt; Maven build &gt; Goals(输入需要的命令，如：jetty.run)</li>
+<li>在控制台Console中显示出<code>Started Jetty Server</code>，表名已经成功运行</li>
+<li>浏览器中输入：<a href="http://localhost:8080/项目名">http://localhost:8080/项目名</a></li>
+</ul>
+</li>
+<li>使用Tomcat运行Web项目<ul>
+<li>选择 Tomcat 需要的版本</li>
+<li>复制示例代码中<plugin>中的坐标</li>
+<li>粘贴入<code>pom.xml</code>文件中<plugin>标签中</li>
+<li>选择项目，右键 &gt; Run As &gt; Maven build &gt; Goals(输入需要的命令，如：package)</li>
+<li>在控制台Console中显示出<code>Started Server Tomcat</code>，表名已经成功运行</li>
+<li>浏览器中输入：<a href="http://localhost:8080/项目名">http://localhost:8080/项目名</a>  </li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当我们第一次创建，可能由于缺少servlet的api导致.jsp文件报错<br />
+1. 打开<a href="http://mvnrepository.com">Maven中央仓库地址</a>：搜索servlet<br />
+2. 选择Java Servlet API进入，根据需要选择版本，进入版本页面后复制下面图表Maven中的标签地址<br />
+3. 粘贴入pom.xml文件<dependencies>标签中<br />
+如果我们在新创建Resource Folder时无法创建，我们切换到Navigator模式下新建Resource Folder即可</p>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../android/ocd/" title="强迫症患者" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                强迫症患者
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../tools/.gitignore/" title=".gitignore" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                .gitignore
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2018 Jerry xu
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/BladeCode" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="http://weibo.com/onblade" class="md-footer-social__link fa fa-weibo"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.f041762f.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-100235665-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

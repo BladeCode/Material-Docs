@@ -1,0 +1,870 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Material Design theme blog">
+      
+      
+        <link rel="canonical" href="https://bladecode.github.io/tools/sublime/">
+      
+      
+        <meta name="author" content="Jerry xu">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.3">
+    
+    
+      
+        <title>Sublime Text - Material-Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#sublime-text" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://bladecode.github.io" title="Material-Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">done_all</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Material-Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Sublime Text
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/BladeCode/BladeCode.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      BladeCode/Material-Docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About" class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../android/android6.0/" title="Android" class="md-tabs__link">
+          Android
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../serve/maven/" title="Serve" class="md-tabs__link">
+          Serve
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.gitignore/" title="Tools" class="md-tabs__link md-tabs__link--active">
+          Tools
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../web/cordova-build/" title="Web" class="md-tabs__link">
+          Web
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">done_all</i>
+      
+    </span>
+    Material-Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/BladeCode/BladeCode.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      BladeCode/Material-Docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/android6.0/" title="Android6.0" class="md-nav__link">
+      Android6.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/apktool/" title="Apk反编译" class="md-nav__link">
+      Apk反编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/ocd/" title="强迫症患者" class="md-nav__link">
+      强迫症患者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Serve
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Serve
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../serve/maven/" title="Maven初体验" class="md-nav__link">
+      Maven初体验
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.gitignore/" title=".gitignore" class="md-nav__link">
+      .gitignore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git/" title="Git 学习笔记" class="md-nav__link">
+      Git 学习笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../idm/" title="Internet Download Manager" class="md-nav__link">
+      Internet Download Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Sublime Text
+      </label>
+    
+    <a href="./" title="Sublime Text" class="md-nav__link md-nav__link--active">
+      Sublime Text
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="一、安装" class="md-nav__link">
+    一、安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package" title="二、安装Package" class="md-nav__link">
+    二、安装Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="三、常用插件" class="md-nav__link">
+    三、常用插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="四、快捷键" class="md-nav__link">
+    四、快捷键
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/cordova-build/" title="Cordova 打包" class="md-nav__link">
+      Cordova 打包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/firebug/" title="Firefox Firebug" class="md-nav__link">
+      Firefox Firebug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/https/" title="HTTPS原理浅析" class="md-nav__link">
+      HTTPS原理浅析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/jquery-mobile/" title="jQueryMobile常用技巧" class="md-nav__link">
+      jQueryMobile常用技巧
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="一、安装" class="md-nav__link">
+    一、安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package" title="二、安装Package" class="md-nav__link">
+    二、安装Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="三、常用插件" class="md-nav__link">
+    三、常用插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="四、快捷键" class="md-nav__link">
+    四、快捷键
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/BladeCode/BladeCode.github.io/edit/master/docs/tools/sublime.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="sublime-text">Sublime Text<a class="headerlink" href="#sublime-text" title="Permanent link">&para;</a></h1>
+<p>2015-11-10 22:59:38</p>
+<p>Sublime 作为文本编辑器，却有着相当出色的扩展，并且有着完美的跨平台，Windows,Mac,Linux都能很方便安装使用，是一款轻量IDE，自从接触到它，就被这种方便，快速，优雅的操作所深深吸引。</p>
+<p>废话不多说，总结了自己平时常用的操作。</p>
+<h2 id="_1">一、安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>下载Sublime：<a href="http://www.sublimetext.com/3">建议下载Sublime Text 3</a></p>
+<h2 id="package">二、安装Package<a class="headerlink" href="#package" title="Permanent link">&para;</a></h2>
+<p>Package Control</p>
+<ul>
+<li>
+<p>方法一：手动安装</p>
+<ul>
+<li>GitHub下载Zip：<a href="https://github.com/wbond/sublime_package_control">Package Control</a></li>
+<li>解压Zip文件，并重新给文件夹命名“ Package Control ”</li>
+<li>拷贝解压文件夹到，Sublime菜单栏Preferences &gt; Browse Packages打开【Packages】文件夹</li>
+<li>重启Sublime</li>
+</ul>
+</li>
+<li>
+<p>方法二：在线安装【推荐】</p>
+<ul>
+<li>进入官网复制对应版本安装代码 Sublime Text 3：<a href="https://packagecontrol.io/installation">Package Control</a></li>
+<li>快捷键<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-grave">`</kbd></span>或者通过View-&gt;Show Console菜单打开命令行</li>
+<li>粘贴复制官网的安装代码，并<span class="keys"><kbd class="key-enter">Enter</kbd></span></li>
+<li>重启Sublime</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">三、常用插件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Themes<br />
+虽然Sublime自带Themes，但个人比较喜欢Material Theme  </li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span>，输入：<code>Install Package</code>，回车</li>
+<li>加载完毕后，在窗口中输入<code>Material Theme</code>，回车安装</li>
+<li>Sublime菜单栏 Preferences &gt; Color Scheme &gt; Material Theme</li>
+<li>AdvancedNewFile<br />
+项目树形机构中快速定位，新建，修改，删除文件  </li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-n">N</kbd></span>，打开命令窗口</li>
+<li>输入：路径/文件名</li>
+<li>SyncedSideBar<br />
+自动定位打开文件所在树形机构项目中的位置</li>
+<li>Emmet<br />
+代码补齐</li>
+<li><code class="codehilite"><span class="nx">ul</span><span class="p">.</span><span class="k">new</span><span class="o">&gt;</span><span class="nx">li</span><span class="o">*</span><span class="mi">5</span></code>：表示ul的<code class="codehilite"><span class="kr">class</span><span class="o">=</span><span class="s2">&quot;new&quot;</span></code>，里面有5个li，写完一个li，可以用Tab键，跳入下一个li中进行编辑</li>
+<li>对选中内容进行包裹</li>
+<li>选中要包裹的内容</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> &gt; <code class="codehilite"><span class="nx">wrap</span> <span class="kd">with</span> <span class="nx">abbrebiation</span></code></li>
+<li>在下面的命令处，直接进行用 <mark>.</mark> 设置class, <mark>#</mark> 设置id等操作</li>
+</ol>
+<h2 id="_3">四、快捷键<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>常用快捷键</p>
+<ul>
+<li>编辑<ul>
+<li>多行游标：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span></li>
+<li>撤销：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span></li>
+<li>合并行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-j">J</kbd></span></li>
+<li>选中当前行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span></li>
+<li>删除当前行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-k">K</kbd></span></li>
+<li>格式化粘贴：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-v">V</kbd></span></li>
+<li>移动当前行，上/下：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> 或者 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li>当前行上/下加入光标：<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> 或者 <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li>当前行之后，插入新行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></li>
+<li>当前行之前，插入新行：<span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></li>
+<li>复制光标所在整行，插入到下一行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-d">D</kbd></span></li>
+<li>选中花括号里面的全部内容不包括{}：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span></li>
+</ul>
+</li>
+<li>显示<ul>
+<li>放大字体：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span></li>
+<li>缩小字体：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span></li>
+<li>默认分屏-1屏：<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-1">1</kbd></span></li>
+<li>左右分屏-2列：<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-2">2</kbd></span></li>
+<li>垂直分屏-2排：<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-8">8</kbd></span></li>
+<li>格式化代码(命令模式)：<code class="codehilite"><span class="nx">reindent</span> <span class="nx">lines</span></code></li>
+</ul>
+</li>
+<li>搜索<ul>
+<li>关键字：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f">F</kbd></span></li>
+<li>查找替换：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-h">H</kbd></span></li>
+<li>项目文件：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>【文件目录/文件名（精确某个文件目录下查找）】</li>
+<li>项目文件定位行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>【文件名:输入数字（文件名可省略，定位当前文件）】</li>
+<li>当前文件函数定位：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-r">R</kbd></span></li>
+<li>项目文件函数定位：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>【文件名:@函数名（文件名可省略，定位当前文件）】</li>
+<li>当前文件变量名，属性：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-colon">:</kbd></span></li>
+<li>退出多行编辑，搜索，命令模式：<span class="keys"><kbd class="key-escape">Esc</kbd></span></li>
+</ul>
+</li>
+</ul>
+<p>自定义快捷键</p>
+<ul>
+<li>搜Key Binding-User：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span>控制面板中输入：<code>Key Binding-User</code></li>
+<li>配置文件
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span><span class="nt">&quot;keys&quot;</span><span class="p">:[</span><span class="s2">&quot;快捷键方式&quot;</span><span class="p">],</span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="s2">&quot;命令名称&quot;</span><span class="p">,</span><span class="nt">&quot;args&quot;</span><span class="p">:{</span><span class="nt">&quot;single_line&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">}},</span>
+<span class="p">]</span>
+</pre></div></li>
+</ul>
+<blockquote>
+<p>扩展：命令名称确定</p>
+</blockquote>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-grave">`</kbd></span> 打开控制台，并输入：<code>sublime.log_commands(True)</code>，回车执行</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span>打开命令面板，输入一个操作动作，在下方控制台中就会输出命令的名称，以及参数<br />
+<img alt="sublime-custom-keymap" src="../../assets/images/gitpages-sublimekey.png" /></li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>保存即可</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../idm/" title="Internet Download Manager" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Internet Download Manager
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../web/cordova-build/" title="Cordova 打包" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Cordova 打包
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2018 Jerry xu
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/BladeCode" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="http://weibo.com/onblade" class="md-footer-social__link fa fa-weibo"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.f041762f.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-100235665-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
