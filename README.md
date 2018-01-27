@@ -21,24 +21,24 @@ Document summary,use mkdocs build
 # Preparation
 
 ## Installing Python
-``` python
-$ python --version
+``` bash
+python --version
 Python 2.7.2
-$ pip --version
+pip --version
 pip 1.5.2
 ```
 >MkDocs supports Python versions 2.7, 3.3, 3.4, 3.5 and pypy.
 
 ## Installing MkDocs
 
-``` python
-$ pip install mkdocs
+``` bash
+pip install mkdocs
 ```
 
 ## Installing Theme
 
-``` python
-$ pip install mkdocs-material
+``` bash
+pip install mkdocs-material
 ```
 
 ## Getting Started
@@ -54,3 +54,6 @@ cd my-project
 mkdocs gh-deploy
 ```
 >MkDocs will build your docs and use the [ghp-import](https://github.com/davisp/ghp-import) tool to `commit` them to the gh-pages branch and `push` the gh-pages branch to GitHub.
+
+# License
+© Jerry xu, 2018. Licensed under an [Apache-2](https://github.com/BladeCode/Material-Docs/blob/master/LICENSE) license.
