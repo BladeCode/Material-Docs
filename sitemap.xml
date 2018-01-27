@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>https://bladecode.github.io/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,29 +12,19 @@
     
         
     <url>
-     <loc>https://bladecode.github.io/android/android6.0/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/android/android6.0/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://bladecode.github.io/android/apktool/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/android/apktool/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://bladecode.github.io/android/ocd/</loc>
-     <lastmod>2018-01-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://bladecode.github.io/serve/maven/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/android/ocd/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -44,25 +34,7 @@
     
         
     <url>
-     <loc>https://bladecode.github.io/tools/.gitignore/</loc>
-     <lastmod>2018-01-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://bladecode.github.io/tools/git/</loc>
-     <lastmod>2018-01-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://bladecode.github.io/tools/idm/</loc>
-     <lastmod>2018-01-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://bladecode.github.io/tools/sublime/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/serve/maven/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -72,25 +44,53 @@
     
         
     <url>
-     <loc>https://bladecode.github.io/web/cordova-build/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/tools/.gitignore/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://bladecode.github.io/web/firebug/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/tools/git/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://bladecode.github.io/web/https/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/tools/idm/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://bladecode.github.io/web/jquery-mobile/</loc>
+     <loc>https://BladeCode.github.io/Material-Docs/tools/sublime/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://BladeCode.github.io/Material-Docs/web/cordova-build/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://BladeCode.github.io/Material-Docs/web/firebug/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://BladeCode.github.io/Material-Docs/web/https/</loc>
+     <lastmod>2018-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://BladeCode.github.io/Material-Docs/web/jquery-mobile/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
