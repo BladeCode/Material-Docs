@@ -39,7 +39,7 @@ Maven是基于项目对象模型（POM），可以通过一小段描述信息来
 ## Maven项目运行
 1. CMD命令，先进入项目文件夹，再输入：`mvn package`
 2. 此时，Maven在helloworld项目下面建立一个新的目录target/，构建打包后的jar包文件，`helloworld-1.0-SNAPSHOT.jar`就放在这个目录下；编译后的的class文件放在target/classes/目录下，测试class文件放在target/test-classes/目录下
-3. 运行项目，CMD命令：`java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworld.App`，查看是否输出：`Hello World!`
+3. 运行项目，CMD命令：`#!js java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworld.App`，查看是否输出：`Hello World!`
 
 !!! Note  
     1. 当你第一次编译运行maven项目需要链接网络，从网上的 maven 库 (repository)下载需要的程序，存放在本地库（<YouPCName\.m2\repository\> ）中

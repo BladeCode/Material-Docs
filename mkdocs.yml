@@ -70,17 +70,17 @@ pages:
   - Android:
     - Android6.0: android/android6.0.md
     - Apk反编译: android/apktool.md
-    - 强迫症患者: android/ocd.md
   - Serve: 
     - Maven初体验: serve/maven.md
   - Tools:
-    - .gitignore: tools/.gitignore.md
     - Git 学习笔记: tools/git.md
+    - .gitignore: tools/.gitignore.md
     - Internet Download Manager: tools/idm.md
+    - Firefox Firebug: tools/firebug.md
+    - 强迫症患者: tools/ocd.md
     - Sublime Text: tools/sublime.md
   - Web: 
-    - Cordova 打包: web/cordova-build.md
-    - Firefox Firebug: web/firebug.md
     - HTTPS原理浅析: web/https.md
+    - Cordova 打包: web/cordova-build.md
     - jQueryMobile常用技巧: web/jquery-mobile.md 
 
