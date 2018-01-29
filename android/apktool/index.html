@@ -223,7 +223,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../tools/.gitignore/" title="Tools" class="md-tabs__link">
+        <a href="../../tools/git/" title="Tools" class="md-tabs__link">
           Tools
         </a>
       
@@ -236,7 +236,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../web/cordova-build/" title="Web" class="md-tabs__link">
+        <a href="../../web/https/" title="Web" class="md-tabs__link">
           Web
         </a>
       
@@ -403,18 +403,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ocd/" title="强迫症患者" class="md-nav__link">
-      强迫症患者
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -481,18 +469,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tools/.gitignore/" title=".gitignore" class="md-nav__link">
-      .gitignore
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../tools/git/" title="Git 学习笔记" class="md-nav__link">
       Git 学习笔记
     </a>
@@ -505,8 +481,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../../tools/.gitignore/" title=".gitignore" class="md-nav__link">
+      .gitignore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../tools/idm/" title="Internet Download Manager" class="md-nav__link">
       Internet Download Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/firebug/" title="Firefox Firebug" class="md-nav__link">
+      Firefox Firebug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/ocd/" title="强迫症患者" class="md-nav__link">
+      强迫症患者
     </a>
   </li>
 
@@ -553,32 +565,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../web/cordova-build/" title="Cordova 打包" class="md-nav__link">
-      Cordova 打包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../web/firebug/" title="Firefox Firebug" class="md-nav__link">
-      Firefox Firebug
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../web/https/" title="HTTPS原理浅析" class="md-nav__link">
       HTTPS原理浅析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/cordova-build/" title="Cordova 打包" class="md-nav__link">
+      Cordova 打包
     </a>
   </li>
 
@@ -677,7 +677,7 @@
 <li>进入ApkTool.jar下载页面，下载最新版，完成后并重命名为<code>apktool.jar</code></li>
 <li>移动<code>apktool.bat</code>和<code>apktool.jar</code>到<code>C://Windows</code>路径下</li>
 <li>打开CMD输入apktool验证<br />
-<img alt="apk-decompilation" src="../assets/images/gitpages-apktool-devtools.png" /></li>
+<img alt="apk-decompilation" src="../../assets/images/gitpages-apktool-devtools.png" /></li>
 </ul>
 </li>
 <li>dex2jar下载：<a href="https://github.com/pxb1988/dex2jar">官网</a></li>
@@ -697,9 +697,9 @@
 </div>
 <p>反编译过程
 CMD中输入：<code>apktool d &lt; apk文件所在路径 &gt; -o &lt; 反编译到哪个路径 &gt;</code><br />
-<img alt="apk-cmd" src="../assets/images/gitpages-apktool-cmd.png" />
+<img alt="apk-cmd" src="../../assets/images/gitpages-apktool-cmd.png" />
 反编译结构如图，其中smali目录下是apk应用java源代码，不过这些是smali文件，可用sublime编辑器打开<a href="https://github.com/ShaneWilton/sublime-smali"><code>需要安装smali插件</code></a>，如果你懂 smali语言，那么可以直接进行对smali文件修改<br />
-<img alt="apk-structure" src="../assets/images/gitpages-apktool-structure.png" /></p>
+<img alt="apk-structure" src="../../assets/images/gitpages-apktool-structure.png" /></p>
 <h2 id="jd-gui">三、Jd-Gui反编译<a class="headerlink" href="#jd-gui" title="Permanent link">&para;</a></h2>
 <p>Jd-Gui主要功能</p>
 <p>JD-GUI is a standalone graphical utility that displays Java source codes of ".class" files
@@ -707,10 +707,10 @@ CMD中输入：<code>apktool d &lt; apk文件所在路径 &gt; -o &lt; 反编译
 <ol>
 <li>将apk应用后缀改为zip并解压，得到其中的<code>classes.dex</code></li>
 <li>将<code>classes.dex</code>复制到<code>d2j-dex2jar.bat</code>所在目录<code>dex2jar</code>文件夹</li>
-<li>在命令行下定位到<code>dex2jar.bat</code>所在目录，运行：<code>d2j-dex2jar.bat classes.dex</code>命令，生成<code>classes_dex2jar.jar</code>文件<br />
-<img alt="devtools-dex2jar" src="../assets/images/gitpages-apktool-dex2jar.png" /></li>
+<li>在命令行下定位到<code>dex2jar.bat</code>所在目录，运行：<code class="codehilite"><span class="nx">d2j</span><span class="o">-</span><span class="nx">dex2jar</span><span class="p">.</span><span class="nx">bat</span> <span class="nx">classes</span><span class="p">.</span><span class="nx">dex</span></code>命令，生成<code>classes_dex2jar.jar</code>文件<br />
+<img alt="devtools-dex2jar" src="../../assets/images/gitpages-apktool-dex2jar.png" /></li>
 <li>进入jdgui文件夹双击<code>jd-gui.exe</code>，打开上面生成的jar包<code>classes_dex2jar.jar</code>，即可看到源代码<br />
-<img alt="devtools-jd-gui" src="../assets/images/gitpages-apktool-jdgui.png" /></li>
+<img alt="devtools-jd-gui" src="../../assets/images/gitpages-apktool-jdgui.png" /></li>
 </ol>
 <h2 id="_2">注意<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>经过代码混淆的apk，这种方法无法反编译出源码<br />
@@ -726,7 +726,7 @@ CMD中输入：<code>apktool d &lt; apk文件所在路径 &gt; -o &lt; 反编译
 <div class="admonition check">
 <p class="admonition-title">Check</p>
 <ul>
-<li>1.2问题是因为ApkTool升级到2.0以上时,使用方式已经替换,格式为:<code>apktool d [-s] -f &lt; apkPath &gt; -o &lt; folderPath &gt;</code>  </li>
+<li>1.2问题是因为ApkTool升级到2.0以上时,使用方式已经替换,格式为:<code class="codehilite"><span class="nx">apktool</span> <span class="nx">d</span> <span class="p">[</span><span class="o">-</span><span class="nx">s</span><span class="p">]</span> <span class="o">-</span><span class="nx">f</span> <span class="o">&lt;</span> <span class="nx">apkPath</span> <span class="o">&gt;</span> <span class="o">-</span><span class="nx">o</span> <span class="o">&lt;</span> <span class="nx">folderPath</span> <span class="o">&gt;</span></code>  </li>
 <li>3问题是因为apktool版本过低导致,请升级到最新版本</li>
 </ul>
 </div>
@@ -763,13 +763,13 @@ CMD中输入：<code>apktool d &lt; apk文件所在路径 &gt; -o &lt; 反编译
           </a>
         
         
-          <a href="../ocd/" title="强迫症患者" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../serve/maven/" title="Maven初体验" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                强迫症患者
+                Maven初体验
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
