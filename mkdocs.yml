@@ -29,7 +29,7 @@ extra:
     - type: 'github'
       link: 'https://github.com/BladeCode'
     - type: 'twitter'
-      link: 'https://twitter.com/squidfunk'
+      link: 'https://twitter.com/_incoder'
     - type: 'weibo'
       link: 'http://weibo.com/onblade'
 
@@ -70,6 +70,7 @@ pages:
   - Android:
     - Android6.0: android/android6.0.md
     - Apk反编译: android/apktool.md
+    - Android通信: android/communication.md
   - Serve: 
     - Maven初体验: serve/maven.md
   - Tools:
